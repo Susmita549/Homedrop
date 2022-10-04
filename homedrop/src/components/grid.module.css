@@ -1,0 +1,42 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+.gridbody {
+  display: flex;
+  height: 120px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.image {
+  width: 28%;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content p {
+  line-height: 10px;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 651px) and (max-width: 1200px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 650px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+}
