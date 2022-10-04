@@ -23,6 +23,13 @@
   margin-left: 10px;
   font-size: 1rem;
 }
+.sprice{
+  color:grey;
+}
+.sprice span{
+  color:black;
+  text-decoration:none;
+}
 
 @media screen and (min-width: 651px) and (max-width: 1200px) {
   .gridContainer {

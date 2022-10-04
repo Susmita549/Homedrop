@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './grid.module.css'
+import React from "react";
+import styles from "./grid.module.css";
 let data = [
   {
     image:
@@ -7,84 +7,95 @@ let data = [
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
   {
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
     title: "CADBURY",
     name: "Cadbury Bournvitea",
     price: "100",
-    sprice: "",
+    sprice: "150",
   },
 ];
 const Grid = () => {
@@ -98,12 +109,15 @@ const Grid = () => {
           <div className={styles.content}>
             <p>{el.title}</p>
             <p>{el.name}</p>
-            <p>{el.price}</p>
+            <p className={styles.sprice}>
+              <s>₹{el.sprice}</s>
+              <span> ₹{el.price}</span>
+            </p>
           </div>
         </div>
       ))}
     </div>
   );
-}
+};
 
-export default Grid
+export default Grid;
