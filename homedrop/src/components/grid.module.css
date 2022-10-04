@@ -38,6 +38,8 @@
   display:grid;
   grid-template-columns: repeat(8,1fr);
   gap:10px;
+  width:90%;
+  margin:auto;
 }
 @media screen and (min-width: 651px) and (max-width: 1200px) {
   .gridContainer {
