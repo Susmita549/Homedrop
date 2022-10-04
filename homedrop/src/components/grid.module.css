@@ -30,7 +30,15 @@
   color:black;
   text-decoration:none;
 }
+.stock{
+  color:green;
+}
 
+.filter{
+  display:grid;
+  grid-template-columns: repeat(8,1fr);
+  gap:10px;
+}
 @media screen and (min-width: 651px) and (max-width: 1200px) {
   .gridContainer {
     display: grid;
@@ -38,6 +46,11 @@
     gap: 15px;
     padding: 15px;
   }
+  .filter{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+}
 }
 @media screen and (min-width: 300px) and (max-width: 650px) {
   .gridContainer {
@@ -46,4 +59,9 @@
     gap: 15px;
     padding: 15px;
   }
+  .filter{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:10px;
+}
 }

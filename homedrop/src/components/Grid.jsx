@@ -8,6 +8,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -16,6 +17,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -24,6 +26,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -32,6 +35,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -40,6 +44,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -48,6 +53,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -56,6 +62,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -64,6 +71,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -72,6 +80,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -80,6 +89,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -88,6 +98,7 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
   {
     image:
@@ -96,27 +107,72 @@ let data = [
     name: "Cadbury Bournvitea",
     price: "100",
     sprice: "150",
+    stock: "In Stock",
   },
 ];
 const Grid = () => {
   return (
-    <div className={styles.gridContainer}>
-      {data.map((el) => (
-        <div className={styles.gridbody}>
-          <div className={styles.image}>
-            <img src={el.image} alt="" />
-          </div>
-          <div className={styles.content}>
-            <p>{el.title}</p>
-            <p>{el.name}</p>
-            <p className={styles.sprice}>
-              <s>₹{el.sprice}</s>
-              <span> ₹{el.price}</span>
-            </p>
-          </div>
+    <>
+      <div className={styles.filter}>
+        <div>
+          <input type="text" placeholder="Search" />
         </div>
-      ))}
-    </div>
+        <div>
+          <select>
+            <option>Type</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>category</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Brand</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Stock Types</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Supplier</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Tags</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Availability</option>
+          </select>
+        </div>
+      </div>
+      <div className={styles.gridContainer}>
+        {data.map((el) => (
+          <div className={styles.gridbody}>
+            <div className={styles.image}>
+              <img src={el.image} alt="" />
+            </div>
+            <div className={styles.content}>
+              <p>{el.title}</p>
+              <p>{el.name}</p>
+              <p className={styles.sprice}>
+                <s>₹{el.sprice}</s>
+
+                <span> ₹{el.price}</span>
+              </p>
+              <p className={styles.stock}>{el.stock}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
