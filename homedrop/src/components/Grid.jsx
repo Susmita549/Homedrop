@@ -1,121 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./grid.module.css";
-let data = [
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-  {
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJxuNDa9uBs9UJi3RX9acVd-Z9iCArD26uw&usqp=CAU",
-    title: "CADBURY",
-    name: "Cadbury Bournvitea",
-    price: "100",
-    sprice: "150",
-    stock: "In Stock",
-  },
-];
+
 const Grid = () => {
+  const [product, setProduct] = useState([]);
+  const fetchDAta = () => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((d) => {
+        console.log(d);
+        setProduct(d);
+      });
+  };
+
+  const handleFilter = (e) => {
+    let category = e.target.value
+    if (category === "all") {
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((d) => {
+          console.log(d);
+          setProduct(d);
+        });
+    }
+    //console.log(category)
+    else {
+       fetch(`https://fakestoreapi.com/products/category/${category}`)
+         .then((res) => res.json())
+         .then((d) => {
+           console.log(d);
+           setProduct(d);
+         });
+   }
+
+  }
+
+  const handleChange = (e) => {
+
+    // function handleClick() {
+    //   let box = document.getElementById("search");
+    //   let array = fetchData.filter((el) => el.language == box.value);
+    //   susmita(array);
+    // }
+    console.log(e.target.value);
+    let category = e.target.value;
+    fetch(`https://fakestoreapi.com/products/category/${category}`)
+      .then((res) => res.json())
+      .then((d) => {
+        console.log(d);
+        setProduct(d);
+      });
+  }
+  useEffect(() => {
+    fetchDAta();
+  }, []);
   return (
     <>
       <div className={styles.filter}>
         <div>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" onChange={handleChange} />
         </div>
         <div>
           <select>
@@ -123,8 +65,12 @@ const Grid = () => {
           </select>
         </div>
         <div>
-          <select>
-            <option>category</option>
+          <select onChange={handleFilter}>
+            <option value="all">category</option>
+            <option value="electronics">electronics</option>
+            <option value="jewelery">jewelery</option>
+            <option value="men's clothing">men's clothing</option>
+            <option value="women's clothing">women's clothing</option>
           </select>
         </div>
         <div>
@@ -154,14 +100,14 @@ const Grid = () => {
         </div>
       </div>
       <div className={styles.gridContainer}>
-        {data.map((el) => (
-          <div className={styles.gridbody}>
+        {product.map((el) => (
+          <div className={styles.gridbody} key={el.id}>
             <div className={styles.image}>
               <img src={el.image} alt="" />
             </div>
             <div className={styles.content}>
               <p>{el.title}</p>
-              <p>{el.name}</p>
+              <p>{el.category}</p>
               <p className={styles.sprice}>
                 <s>₹{el.sprice}</s>
 
