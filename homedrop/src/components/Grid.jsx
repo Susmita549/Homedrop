@@ -35,20 +35,24 @@ const Grid = () => {
   }
 
   const handleChange = (e) => {
-
-    // function handleClick() {
-    //   let box = document.getElementById("search");
-    //   let array = fetchData.filter((el) => el.language == box.value);
-    //   susmita(array);
-    // }
     console.log(e.target.value);
-    let category = e.target.value;
-    fetch(`https://fakestoreapi.com/products/category/${category}`)
-      .then((res) => res.json())
-      .then((d) => {
-        console.log(d);
-        setProduct(d);
-      });
+    if (!e.target.value) {
+      fetchDAta(product);
+    }
+    let array = product.filter((el) => el.title.includes(e.target.value) || el.category.includes(e.target.value));
+    setProduct(array);
+
+
+
+
+
+    // let category = e.target.value;
+    // fetch(`https://fakestoreapi.com/products/category/${category}`)
+    //   .then((res) => res.json())
+    //   .then((d) => {
+    //     console.log(d);
+    //     setProduct(d);
+    //   });
   }
   useEffect(() => {
     fetchDAta();
